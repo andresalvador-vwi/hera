@@ -16,7 +16,7 @@ class _AuthPageState extends State<AuthPage> {
         children: [
           Center(
             child: TextButton(
-              onPressed: () => Navigator.pushNamed(context, '/login'), 
+              onPressed: () => Navigator.pushNamed(context, '/boasvindas'), 
               child: const Text('Próxima tela')
             ),
           )

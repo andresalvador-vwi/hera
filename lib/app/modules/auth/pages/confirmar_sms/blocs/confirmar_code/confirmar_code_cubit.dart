@@ -13,7 +13,7 @@ class ConfirmarCodeCubit extends Cubit<ConfirmarCodeState> {
   Future<void> confirmarSms(String code) async {
     try {
       emit(ConfirmarCodeLoading());
-      await Future.delayed(const Duration(seconds: 5));
+      await Future.delayed(const Duration(seconds: 3));
       emit(ConfirmarCodeSucess());
     } on PublicMessageException catch (e) {
       emit(ConfirmarCodeFailure(e));
