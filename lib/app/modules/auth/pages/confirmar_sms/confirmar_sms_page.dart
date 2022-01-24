@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -90,7 +88,7 @@ class _ConfirmarSmsPageState extends State<ConfirmarSmsPage> {
           BlocBuilder<ConfirmarCodeCubit,ConfirmarCodeState>(
             bloc: confirmarCodeCubit,
             builder: (context,state) {
-              return DefaultButton(
+              return DefaultButtonHera(
                 textButton: 'Avançar',
                 isLoading: state is ConfirmarCodeLoading ? true : false,
                 actionButton: () async => confirmarCodeCubit.confirmarSms(confirmarCodeCubit.currentCode)
@@ -111,7 +109,7 @@ class _ConfirmarSmsPageState extends State<ConfirmarSmsPage> {
               }
             },
             builder: (context,state) {
-              return DefaultButton(
+              return DefaultButtonHera(
                 textButton: 'Enviar novamente',
                 backgroundColor: Colors.red,
                 isLoading: state is ReenviarCodeLoading,

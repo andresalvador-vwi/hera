@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 
-class DefaultButton extends StatelessWidget {
+class DefaultButtonHera extends StatelessWidget {
   final String textButton;
   final bool isLoading;
   final Color? backgroundColor;
+  final double? width;
+  final double? height;
   final Function() actionButton;
-  const DefaultButton({
+  const DefaultButtonHera({
     Key? key,
     required this.textButton,
     required this.actionButton,
     this.backgroundColor,
     this.isLoading = false,
+    this.width,
+    this.height,
   }) : super(key: key);
 
   @override
@@ -18,7 +22,7 @@ class DefaultButton extends StatelessWidget {
     return TextButton(
       style: ButtonStyle(
         minimumSize: MaterialStateProperty.all<Size>(
-          Size(MediaQuery.of(context).size.width / 1.5, 55),
+          Size(width ?? 280, height ?? 55),
         ),
         backgroundColor:
             MaterialStateProperty.all<Color>(backgroundColor ?? Colors.green),

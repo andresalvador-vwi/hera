@@ -106,11 +106,11 @@ class _BoasVindasPageState extends State<BoasVindasPage> {
               height: 50,
             ),
             Center(
-              child: DefaultButton(
+              child: DefaultButtonHera(
                 textButton: 'Começar',
                 backgroundColor: Colors.greenAccent[400],
                 actionButton: () {
-                  Navigator.pushNamed(context,'/enviosms');
+                  Navigator.pushNamed(context,'/login');
                 }
               ),
             )
